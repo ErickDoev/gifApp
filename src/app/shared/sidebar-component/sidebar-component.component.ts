@@ -9,6 +9,11 @@ export class SidebarComponentComponent  {
 
   constructor(private gifService: GifsService) { }
 
+  burcarTermino(termino: string){
+    console.log(termino);
+    this.gifService.burcarGifs(termino);
+  }
+
  get historial(){
    return this.gifService.historial;
  }
